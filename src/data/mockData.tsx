@@ -1,5 +1,5 @@
 
-import { Car, Plane, FootPrints } from "lucide-react";
+import { Car, Plane, Footprints } from "lucide-react";
 
 export interface User {
   id: string;
@@ -43,9 +43,9 @@ export const getActivityIcon = (activity: ActivityType) => {
     case 'flying':
       return Plane;
     case 'walking':
-      return FootPrints;
+      return Footprints;
     default:
-      return FootPrints;
+      return Footprints;
   }
 };
 
