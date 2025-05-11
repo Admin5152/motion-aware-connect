@@ -22,9 +22,9 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-app-blue-600 text-white font-bold flex items-center justify-center">
-              LT
+              A
             </div>
-            <span className="font-bold text-lg tracking-tight">LocationTracker</span>
+            <span className="font-bold text-lg tracking-tight">ARGUS</span>
           </Link>
         </div>
 
