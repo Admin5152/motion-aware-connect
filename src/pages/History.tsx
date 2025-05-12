@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/select";
 import { mockLocationHistory, mockUsers, getActivityIcon, LocationHistory, User } from '@/data/mockData';
 import { format } from 'date-fns';
+import BackButton from '@/components/navigation/BackButton';
 
 const History = () => {
   const [selectedUserId, setSelectedUserId] = useState<string>('all');
@@ -44,7 +45,10 @@ const History = () => {
   return (
     <div className="container py-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Location History</h1>
+        <div className="flex items-center gap-2">
+          <BackButton />
+          <h1 className="text-3xl font-bold">Location History</h1>
+        </div>
         <div className="w-64">
           <Select value={selectedUserId} onValueChange={setSelectedUserId}>
             <SelectTrigger className="w-full">

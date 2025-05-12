@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Card, 
@@ -29,6 +28,7 @@ import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import BackButton from '@/components/navigation/BackButton';
 
 const profileFormSchema = z.object({
   name: z.string().min(2, {
@@ -119,7 +119,10 @@ const Settings = () => {
   return (
     <div className="container py-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Settings</h1>
+        <div className="flex items-center gap-2">
+          <BackButton />
+          <h1 className="text-3xl font-bold">Settings</h1>
+        </div>
       </div>
 
       <Tabs defaultValue="account" className="w-full space-y-6">

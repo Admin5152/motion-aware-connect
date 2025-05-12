@@ -5,12 +5,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Bell } from 'lucide-react';
 import TipsList from '@/components/inbox/TipsList';
+import BackButton from '@/components/navigation/BackButton';
 
 const Inbox = () => {
   return (
     <div className="container py-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Inbox</h1>
+        <div className="flex items-center gap-2">
+          <BackButton />
+          <h1 className="text-3xl font-bold">Inbox</h1>
+        </div>
       </div>
 
       <Tabs defaultValue="messages" className="w-full">
