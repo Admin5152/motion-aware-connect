@@ -8,6 +8,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import { SidebarProvider } from "./components/ui/sidebar";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import { useEffect, useState } from "react";
 
@@ -52,6 +53,14 @@ const App = () => {
                   element={
                     <ProtectedRoute>
                       <Index />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route 
+                  path="/profile" 
+                  element={
+                    <ProtectedRoute>
+                      <Profile />
                     </ProtectedRoute>
                   }
                 />
