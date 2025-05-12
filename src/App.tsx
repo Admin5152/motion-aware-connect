@@ -8,6 +8,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import { SidebarProvider } from "./components/ui/sidebar";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Inbox from "./pages/Inbox";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/inbox" element={<Inbox />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
