@@ -9,6 +9,7 @@ import { SidebarProvider } from "./components/ui/sidebar";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Inbox from "./pages/Inbox";
+import History from "./pages/History";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/inbox" element={<Inbox />} />
+              <Route path="/history" element={<History />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
