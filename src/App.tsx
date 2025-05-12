@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Inbox from "./pages/Inbox";
 import History from "./pages/History";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/inbox" element={<Inbox />} />
               <Route path="/history" element={<History />} />
+              <Route path="/settings" element={<Settings />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
