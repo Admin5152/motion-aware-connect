@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
 
-## Project info
+<p align="center">
+  <img style="width:100rem; height:auto" src="https://cdn.dribbble.com/users/1787323/screenshots/10091971/media/d43c019bfeff34be8816481e843ea8c1.png"/>
+</p>
 
-**URL**: https://lovable.dev/projects/d369e3bc-a3ba-4928-8799-145e82a8b700
+<h2 align="left">Hi 👋! I'm Seth and I'm a Programmer</h2>
 
-## How can I edit this code?
 
-There are several ways of editing your application.
 
-**Use Lovable**
+<div align="center">
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d369e3bc-a3ba-4928-8799-145e82a8b700) and start prompting.
+## <picture><img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 50px></picture> About me
 
-Changes made via Lovable will be committed automatically to this repo.
+<picture> <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width = 250px></picture>
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Follow these steps:
+  
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=ROBOT&size=25&color=39FF14&background=000000&center=true&vCenter=true&width=490&lines=%3E+Welcome+to+my+GitHub+profile...!)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+<img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif' alt = 'Awesome Matrix Code' align='right'/>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+</div>
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/sethagyeimensah2) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/seth-charles-agyei-mensah-9204812bb) ![Bold Portfolio](https://bold.pro/my/seth-charlesagyei-mensah-240901224329)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Admin5152&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=Admin5152&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Admin5152&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-## What technologies are used for this project?
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Admin5152&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-This project is built with:
+### ✍️ 
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+<img align="right" height="150" src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif"/>
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/d369e3bc-a3ba-4928-8799-145e82a8b700) and click on Share -> Publish.
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=Admin5152&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
-## Can I connect a custom domain to my Lovable project?
+---
+[![](https://visitcount.itsvg.in/api?id=Admin5152&icon=0&color=0)](https://visitcount.itsvg.in)
 
-Yes, you can!
+<p align = "center">
+	<img src = "https://github.com/7oSkaaa/7oSkaaa/blob/output/github-contribution-grid-snake.svg?" alt = "Snake Game"/>
+</p>
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+
