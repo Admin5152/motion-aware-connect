@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bell, Sun, Moon, LogOut } from 'lucide-react';
@@ -12,6 +11,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import Logo from '@/components/brand/Logo';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -21,10 +21,7 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 md:ml-0 ml-12"> {/* Add left margin on mobile for menu button */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full bg-app-blue-600 text-white font-bold flex items-center justify-center">
-              A
-            </div>
-            <span className="font-bold text-lg tracking-tight">ARGUS</span>
+            <Logo />
           </Link>
         </div>
 
