@@ -99,7 +99,7 @@ const SidebarNav = () => {
   const MobileSidebar = () => (
     <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden fixed top-3 left-4 z-40">
+        <Button variant="ghost" size="icon" className="md:hidden fixed top-3 left-4 z-50">
           <Menu className="h-5 w-5" />
           <span className="sr-only">Toggle menu</span>
         </Button>
