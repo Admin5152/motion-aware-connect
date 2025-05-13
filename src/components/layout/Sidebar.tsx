@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Map, 
@@ -17,6 +17,49 @@ import { Button } from '@/components/ui/button';
 
 const SidebarNav = () => {
   const location = useLocation();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  // Swipe detection variables
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const minSwipeDistance = 50; // Minimum swipe distance in pixels
+
+  useEffect(() => {
+    // Handle touch start
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX.current = e.changedTouches[0].screenX;
+    };
+
+    // Handle touch end
+    const handleTouchEnd = (e: TouchEvent) => {
+      touchEndX.current = e.changedTouches[0].screenX;
+      handleSwipe();
+    };
+
+    // Handle swipe logic
+    const handleSwipe = () => {
+      const swipeDistance = touchEndX.current - touchStartX.current;
+      
+      // If swipe from left to right and starting near the edge
+      if (swipeDistance > minSwipeDistance && touchStartX.current < 30) {
+        setIsSidebarOpen(true);
+      } 
+      // If swipe from right to left while sidebar is open
+      else if (swipeDistance < -minSwipeDistance && isSidebarOpen) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    // Add event listeners
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchend', handleTouchEnd);
+
+    // Clean up
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [isSidebarOpen]);
   
   const navItems = [
     { icon: Map, label: 'Map', path: '/' },
@@ -54,7 +97,7 @@ const SidebarNav = () => {
 
   // Mobile sidebar (sheet/drawer)
   const MobileSidebar = () => (
-    <Sheet>
+    <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden fixed top-3 left-4 z-40">
           <Menu className="h-5 w-5" />
@@ -68,6 +111,7 @@ const SidebarNav = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={() => setIsSidebarOpen(false)} // Close sidebar when a link is clicked
                 className={cn(
                   'flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground',
                   location.pathname === item.path ? 'bg-accent text-accent-foreground' : 'text-muted-foreground'
@@ -87,10 +131,18 @@ const SidebarNav = () => {
     </Sheet>
   );
 
+  // Add a swipe indicator for mobile
+  const SwipeIndicator = () => (
+    <div className="fixed left-0 top-1/2 -translate-y-1/2 md:hidden">
+      <div className="bg-accent/50 h-24 w-2 rounded-r-md opacity-30" />
+    </div>
+  );
+
   return (
     <>
       <DesktopSidebar />
       <MobileSidebar />
+      <SwipeIndicator />
     </>
   );
 };
