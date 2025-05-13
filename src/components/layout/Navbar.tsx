@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background/80 border-b shadow-sm">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:ml-0 ml-12"> {/* Add left margin on mobile for menu button */}
           <Link to="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-app-blue-600 text-white font-bold flex items-center justify-center">
               A
