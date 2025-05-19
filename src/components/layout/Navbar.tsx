@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Bell, Sun, Moon, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/context/ThemeContext';
@@ -12,28 +12,17 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { toast } from '@/components/ui/sonner';
+import Logo from '@/components/brand/Logo';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    // In a real app, this would clear tokens, session data, etc.
-    localStorage.removeItem('isLoggedIn');
-    toast.success('Successfully logged out');
-    navigate('/login');
-  };
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background/80 border-b shadow-sm">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-background/80 border-b shadow-sm">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:ml-0 ml-16"> {/* Increased left margin on mobile for menu button */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full bg-app-blue-600 text-white font-bold flex items-center justify-center">
-              LT
-            </div>
-            <span className="font-bold text-lg tracking-tight">LocationTracker</span>
+            <Logo />
           </Link>
         </div>
 
@@ -73,7 +62,7 @@ const Navbar = () => {
               <DropdownMenuItem asChild>
                 <Link to="/settings" className="w-full cursor-pointer">Settings</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-destructive">
+              <DropdownMenuItem className="cursor-pointer text-destructive">
                 <LogOut className="mr-2 h-4 w-4" />
                 Log out
               </DropdownMenuItem>
