@@ -27,7 +27,11 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-const Login = () => {
+interface LoginProps {
+  onLoginSuccess?: () => void;
+}
+
+const Login = ({ onLoginSuccess }: LoginProps) => {
   const navigate = useNavigate();
   const [error, setError] = React.useState<string | null>(null);
   
@@ -43,10 +47,17 @@ const Login = () => {
     // This is a mock authentication function
     // In a real app, you'd connect this to your backend authentication service
     if (data.email === 'demo@example.com' && data.password === 'password123') {
-      // Success - show toast and redirect to dashboard
+      // Success - show toast and update authentication state
       toast.success('Login successful! Welcome back.');
       localStorage.setItem('isLoggedIn', 'true');
-      navigate('/');
+      
+      // Call the success callback if provided
+      if (onLoginSuccess) {
+        onLoginSuccess();
+      } else {
+        // Fallback to navigate if no callback
+        navigate('/');
+      }
     } else {
       // Show error message
       setError('Invalid email or password. Please try again.');
