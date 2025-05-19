@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { toast } from '@/components/ui/sonner';
+import Logo from '@/components/ui/logo';
 
 const loginSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address' }),
@@ -53,17 +54,17 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 flex items-center justify-center px-4">
-      <div className="w-full max-w-md space-y-8 glass-card p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 px-4">
+      <div className="w-full max-w-md space-y-8 glass-card p-8 animate-fade-in">
         <div className="text-center">
-          <div className="mx-auto h-12 w-12 rounded-full bg-app-blue-600 text-white font-bold flex items-center justify-center">
-            LT
+          <div className="flex justify-center">
+            <Logo size="lg" />
           </div>
-          <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
-            Sign in to your account
+          <h1 className="mt-6 text-3xl font-bold text-gray-900 dark:text-white">
+            Welcome to ARGUS
           </h1>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-            Track locations and stay connected
+            Keeping you secure and connected
           </p>
         </div>
         
@@ -128,7 +129,7 @@ const Login = () => {
               </div>
             </div>
             
-            <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+            <Button type="submit" className="w-full bg-app-blue-600 hover:bg-app-blue-700" disabled={form.formState.isSubmitting}>
               <LogIn className="mr-2 h-4 w-4" />
               {form.formState.isSubmitting ? "Signing in..." : "Sign in"}
             </Button>
